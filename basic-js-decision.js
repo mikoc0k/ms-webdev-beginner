@@ -42,3 +42,11 @@ switch (biji) {
         console.log('tidak ada biji');
         break
 }
+
+
+// ternary exp
+// condition? if True : if False
+let firstNum = 12;
+let secNum = 90;
+let komparasiNum = firstNum > secNum ? firstNum : secNum;
+console.log(komparasiNum);
