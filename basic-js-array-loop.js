@@ -38,9 +38,16 @@ console.log(buah[4]) // undefined
 
 // beberapa method array memiliki spesial treatmen kpd slot kosong/ masih menghandle slot kosong
 // contoh yang tidak spesial treatment
+// selengkapnya : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
 buah.forEach((item,index)=>{
     console.log(`${index}. ${item}`);
 }) // index-4 kosong tidak dicetak
 
 buah.reverse(buah);
 console.log(buah); // elemen yang kosong ditampilkan (special treatment)
+
+const iterator = buah.keys(); // metod yang tidak treat empty slot spesial, tp menampilkan nilai undefined
+console.log(iterator);
+for (const key of iterator){
+    console.log(`${key}. ${buah[key]}`);
+}
